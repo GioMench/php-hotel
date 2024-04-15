@@ -38,9 +38,12 @@ $hotels = [
         'distance_to_center' => 50
     ],
 
-]
+];
 
-    ?>
+
+
+
+?>
 
 
 <!DOCTYPE html>
@@ -74,8 +77,6 @@ $hotels = [
                         <th scope="col">Vote</th>
                         <th scope="col">Parking</th>
                         <th scope="col">Distance to center</th>
-
-
                     </tr>
                 </thead>
                 <?php foreach ($hotels as $hotel): ?>
@@ -86,7 +87,7 @@ $hotels = [
                             <td><?= $hotel["name"] ?></td>
                             <td><?= $hotel["description"] ?></td>
                             <td><?= $hotel["vote"] ?></td>
-                            <td><?= $hotel["parking"] ?></td>
+                            <td><? if ($hotel["parking"]) echo "si" ?></td>
                             <td><?= $hotel["distance_to_center"] ?></td>
                         </tr>
 
