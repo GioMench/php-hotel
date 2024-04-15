@@ -69,16 +69,18 @@ $hotels = [
     <main>
         <div class="container my-5">
             <table class="table table-hover">
+                <!--heade-table-->
                 <thead>
                     <tr>
                         <th scope="col">HOTEL</th>
                         <th scope="col">Name</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Vote</th>
-                        <th scope="col">Parking</th>
-                        <th scope="col">Distance to center</th>
+                        <th scope="col" class="text-center">Vote</th>
+                        <th scope="col" class="text-center">Parking</th>
+                        <th scope="col" class="text-center">Distance to center</th>
                     </tr>
                 </thead>
+                <!--add-loop-for-body-table-->
                 <?php foreach ($hotels as $hotel): ?>
 
                     <tbody>
@@ -86,9 +88,9 @@ $hotels = [
                             <th scope="row"><i class="fa-solid fa-hotel"></i></th>
                             <td><?= $hotel["name"] ?></td>
                             <td><?= $hotel["description"] ?></td>
-                            <td><?= $hotel["vote"] ?></td>
-                            <td><? if ($hotel["parking"]) echo "si" ?></td>
-                            <td><?= $hotel["distance_to_center"] ?></td>
+                            <td class="text-center"><?= $hotel["vote"] ?></td>
+                            <td class="text-center"><? if ($hotel["parking"]) echo "si" ?></td>
+                            <td class="text-center"><?= $hotel["distance_to_center"] ?></td>
                         </tr>
 
                     </tbody>
